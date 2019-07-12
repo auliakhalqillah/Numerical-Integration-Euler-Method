@@ -1,5 +1,5 @@
 # Euler-Method
-Euler method is one of the numeric integration method. In this package, the euler method is implemented in Fortran program. There are two files in this package:
+Euler method is one of the numeric integration methods. In this package, the euler method is implemented in Fortran program. There are three files in this package:
   1. euler.f95
   2. euler.m (Matlab)
   3. euler.png
