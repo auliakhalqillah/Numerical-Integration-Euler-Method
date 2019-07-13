@@ -9,7 +9,7 @@ The function f(x) = (25(x^3))-(12(x^2))+(16x)-10 is used to solve the intergrati
 There are three parameters input have to set, for example:
   - Initial Boundary = 0
   - Final Boundary = 10
-  - Sted Data Point = 0.1
+  - Set Data Point = 0.1
 # Contact
 The program is written by Aulia Khalqillah,S.Si (2019)
 email: auliakhalqillah.mail@gmail.com
