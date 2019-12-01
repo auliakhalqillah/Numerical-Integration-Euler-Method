@@ -4,7 +4,7 @@ Euler method is one of the numeric integration methods to solve ordinary differe
   2. euler.m (Matlab)
   3. euler.png
 # How To Use?
-The function f(x) = (25(x^3))-(12(x^2))+(16x)-10 is used to solve the intergration problem in this case. To plot the result, you can use euler.m (Matlab) file.
+The function of f(x) = (25(x^3))-(12(x^2))+(16x)-10 is used to solve the intergration problem in this case. To plot the result, you can use euler.m (Matlab) file.
 
 There are three parameters input have to set, for example:
   - Initial Boundary = 0
