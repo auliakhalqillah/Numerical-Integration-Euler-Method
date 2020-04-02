@@ -11,8 +11,8 @@
 program euler
   implicit none
 
-  real :: x, y, h, f,fa
-  real :: i, n, xi, xf
+  real :: x, y, h, df,fa
+  real :: i, n, xi, xf, error
   character(len=100) :: fmt
 
   write(*,*)""
@@ -24,29 +24,35 @@ program euler
   read *, xi
   write(*,"(a)",advance='no') "INSERT FINAL BOUNDARY:"
   read *, xf
-  write(*,"(a)",advance='no') "INSERT STEP DATA POINT (EX:0.1):"
+  write(*,"(a)",advance='no') "INSERT STEP OF DATA (EX:0.1):"
   read*, h
 
   n = abs(xf - xi)/h
 
   x = xi
-  y = 0
+  y = 1
   i = 1
-  fmt = "(a12,a13,a22,a19)"
+  fmt = "(a12,a13,a22,a19,a15)"
   write(*,*)""
-  write(*,fmt)"X DATA","F(X)","Analytic Int","Numeric Int"
+  write(*,fmt)"X DATA","dF(X)","Analytic Int","Numeric Int","Error(%)"
   open (1, file='euler.txt', status='replace')
   do while (i <= n)
-    ! original function
-    f = (25*(x**3))-(12*(x**2))+(16*x)-10
-    ! analytic integral
-    fa = ((25/4)*(x**4))-(4*(x**3))+(8*(x**2))-(10*x)
-    ! end of analytic integral
-    y = y + (f*h)
+    ! first differential equation
+    df = 2 - (exp(-4*x)) - (2*y)
+
+    ! analytic integral (original function)
+    fa = 1 + (0.5*exp(-4*x)) - (0.5*exp(-2*x))
+
+    ! Error calculation
+    error = (abs(fa-y)/fa)*100
+
+    write(1,*) x,df,fa,y,error
+    write(*,*) x,df,fa,y,error
+    ! Euler calculation
+    y = y + (df*h)
+
     x = x + h
     i = i + 1
-    write(1,*) x,f,fa,y
-    write(*,*) x,f,fa,y
   end do
   close(1)
 end program
