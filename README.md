@@ -14,4 +14,4 @@ There are three parameters input have to set, for example:
 The program is written by Aulia Khalqillah,S.Si (2019)
 email: auliakhalqillah.mail@gmail.com
 # Material Source
-Steven C. Chapra and Raymond P. Canale, Numerical Methods for Engineers, Sixth Edition
+[Paul Dawkins,2018,Differential Equation](http://tutorial.math.lamar.edu/Classes/DE/EulersMethod.aspx)
