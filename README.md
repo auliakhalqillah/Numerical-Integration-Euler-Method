@@ -1,4 +1,4 @@
-# Euler-Method
+# Numerical Integration: Euler Method
 Euler method is one of the numeric integration methods to solve ordinary differential equation (ODE).
 
 # Usage
