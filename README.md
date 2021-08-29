@@ -24,7 +24,7 @@ There are three parameters input:
 There are five variables output:
   - t is point data
   - df(t) is first derivative function 
-  - fa(t) is excat/analytical integration
+  - fa(t) is exact/analytical integration
   - y(t) is numerical integration by using euler method
   - error is error calculation
 
